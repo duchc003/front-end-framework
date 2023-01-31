@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myModule">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <title>Document</title>
+  </head>
+  <body ng-controller="myController">
+    Số thứ 1: <input type="text" ng-model="soThu1" /><br />
+    Số thứ 2: <input type="text" ng-model="soThu2" /><br />
+    <button ng-click="cong()">+</button>
+    <button ng-click="tru()">-</button>
+    <button ng-click="nhan()">*</button>
+    <button ng-click="chia()">/</button>
+    <h3>Kết Quả:</h3>
+    <p>{{sum}}</p>
+    <hr />
+    <input type="text" ng-model="nhapTen" />
+    <button ng-click="inThongBao()">In Thông Báo</button>
+    <p>Xin Chào {{message}}</p>
+    <hr />
+    <p>Tên: {{hocSinh.name}}</p>
+    <p>Tuổi: {{hocSinh.age}}</p>
+    <p>Địa Chỉ: {{hocSinh.address}}</p>
+    <p>Ngành Học: {{hocSinh.nganhHoc}}</p>
+    <hr />
+    <p>Tên: {{SinhVien.name}}</p>
+    <p>:Giới Tính: {{SinhVien.gender}}</p>
+    <p>Ngày/Tháng/Năm: {{SinhVien.ngayThangNamSinh}}</p>
+    <p>Điểm: {{SinhVien.diem}}</p>
+    <hr />
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Họ Và Tên</th>
+          <th scope="col">Ngày Sinh</th>
+          <th scope="col">Giới Tính</th>
+          <th scope="col">Điểm</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>{{MangSinhVien[0].name}}</td>
+          <td>{{MangSinhVien[0].gender}}</td>
+          <td>{{MangSinhVien[0].ngayThangNamSinh}}</td>
+          <td>{{MangSinhVien[0].diem}}</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>{{MangSinhVien[1].name}}</td>
+          <td>{{MangSinhVien[1].gender}}</td>
+          <td>{{MangSinhVien[1].ngayThangNamSinh}}</td>
+          <td>{{MangSinhVien[1].diem}}</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>{{MangSinhVien[2].name}}</td>
+          <td>{{MangSinhVien[2].gender}}</td>
+          <td>{{MangSinhVien[2].ngayThangNamSinh}}</td>
+          <td>{{MangSinhVien[2].diem}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <p>Chiều dài</p>
+    <input type="text" ng-model="chieuDai" />
+    <p>Chiều rộng</p>
+    <input type="text" ng-model="chieuRong" />
+    <button ng-click="ChuVi()">Caculate</button>
+    <p>diện tích</p>
+    <p>{{caculate1}}</p>
+    <p>Chu Vi</p>
+    <p>{{caculate2}}</p>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../lib/angular.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
