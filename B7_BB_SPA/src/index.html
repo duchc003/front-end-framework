@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myModule">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <li><a href="#trang-Chu">Trang Chủ</a></li>
+      <li><a href="#gioi-thieu">Giới Thiệu</a></li>
+      <li><a href="#ve-chung-toi">Về Chúng Tôi</a></li>
+    </header>
+    <!-- Section : body -->
+    <!-- ng-view chứa nội dung thay đổi theo từng trang -->
+    <section>
+      <div ng-view></div>
+    </section>
+    <!-- Footer -->
+    <footer>Footer: Hoàng Công Đức</footer>
+    <script src="../lib/angular.js"></script>
+    <!-- Dùng để chuyển sang SPA -->
+    <script src="../lib/angular-route.js"></script>
+    <script src="router.js"></script>
+  </body>
+</html>
