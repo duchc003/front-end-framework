@@ -14,7 +14,6 @@ app.config(function ($routeProvider, $locationProvider) {
     .when("/gioi-thieu", {
       template: "<h1>Đây là giới thiệu</h1>",
     })
-
     .when("/ve-chung-toi", {
       template: "<h1>Đây là chúng tôi</h1>",
     })
