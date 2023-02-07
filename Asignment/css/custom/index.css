@@ -16,3 +16,15 @@ footer ul li {
   padding-bottom: 5px;
   list-style: none;
 }
+.header-bao-mat {
+  font-size: 15px;
+  display: block;
+}
+.col-lg-6 a {
+  color: black;
+  list-style: none;
+  display: contents;
+}
+.header-bao-mat-col-lg-6 a:hover {
+  color: red;
+}
