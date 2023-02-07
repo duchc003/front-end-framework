@@ -4,27 +4,11 @@
     <th>Loại</th>
     <th>Giới Tính</th>
     <th>Chiều Cao</th>
-    <th>Id</th>
   </tr>
-  <tr ng-repeat="TV in listThucVat">
-    <td>{{listThucVat[0].ten}}</td>
-    <td>{{listThucVat[0].loai}}</td>
-    <td>{{listThucVat[0].gioiTinh}}</td>
-    <td>{{listThucVat[0].chieuCao}}</td>
-    <td>{{listThucVat[0].id}}</td>
-  </tr>
-  <tr>
-    <td>{{listThucVat[1].ten}}</td>
-    <td>{{listThucVat[1].loai}}</td>
-    <td>{{listThucVat[1].gioiTinh}}</td>
-    <td>{{listThucVat[1].chieuCao}}</td>
-    <td>{{listThucVat[1].id}}</td>
-  </tr>
-  <tr>
-    <td>{{listThucVat[2].ten}}</td>
-    <td>{{listThucVat[2].loai}}</td>
-    <td>{{listThucVat[2].gioiTinh}}</td>
-    <td>{{listThucVat[2].chieuCao}}</td>
-    <td>{{listThucVat[2].id}}</td>
+  <tr ng-repeat="tv in listDongVat">
+    <td>{{tv.id}}</td>
+    <td>{{tv.ten}}</td>
+    <td>{{tv.loai}}</td>
+    <td>{{tv.gioiTinh}}</td>
   </tr>
 </table>

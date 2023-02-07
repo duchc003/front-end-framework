@@ -1,0 +1,34 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="sv in listTrangChu1">
+      <td>{{sv.id}}</td>
+      <td>{{sv.name}}</td>
+      <td>{{sv.age}}</td>
+      <td>{{sv.gender == "true" ? "Nam" : "Nữ"}}</td>
+      <td>{{sv.address}}</td>
+    </tr>
+    <tr ng-repeat="sv in listTrangChu2">
+      <td>{{sv.id}}</td>
+      <td>{{sv.name}}</td>
+      <td>{{sv.age}}</td>
+      <td>{{sv.gender == "true" ? "Nam" : "Nữ"}}</td>
+      <td>{{sv.address}}</td>
+    </tr>
+    <tr ng-repeat="sv in listTrangChu3">
+      <td>{{sv.id}}</td>
+      <td>{{sv.name}}</td>
+      <td>{{sv.age}}</td>
+      <td>{{sv.gender == "true" ? "Nam" : "Nữ"}}</td>
+      <td>{{sv.address}}</td>
+    </tr>
+  </tbody>
+</table>

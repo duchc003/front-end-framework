@@ -5,3 +5,14 @@ header img {
   height: 50px;
   width: 150px;
 }
+.i.bi.bi-headset {
+  width: 100%;
+}
+footer img {
+  height: 50px;
+  width: 150px;
+}
+footer ul li {
+  padding-bottom: 5px;
+  list-style: none;
+}
