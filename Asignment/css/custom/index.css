@@ -25,6 +25,110 @@ footer ul li {
   list-style: none;
   display: contents;
 }
-.header-bao-mat-col-lg-6 a:hover {
-  color: red;
+.col-lg-3 a {
+  color: black;
+  list-style: none;
+  display: contents;
+}
+.header-bao-mat a {
+  padding-top: 10px;
+}
+li.nav-item {
+  margin-right: 20px;
+  padding-top: 15px;
+}
+form.d-flex.ng-pristine.ng-valid {
+  padding-top: 5px;
+}
+/* category */
+.single {
+  padding: 30px 15px;
+  background: #fcfcfc;
+  border: 1px solid #f0f0f0;
+}
+.single h3.side-title {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  font-size: 20px;
+  color: #333;
+  text-transform: uppercase;
+}
+.single h3.side-title:after {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background: #ff173c;
+  display: block;
+  margin-top: 6px;
+}
+
+.single ul {
+  margin-bottom: 0;
+}
+.single li a {
+  color: #666;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #f0f0f0;
+  line-height: 40px;
+  display: block;
+  text-decoration: none;
+}
+.single li a:hover {
+  color: #ff173c;
+}
+.single li:last-child a {
+  border-bottom: 0;
+}
+/* section1 */
+.section1 {
+  padding-top: 40px;
+}
+.section1 img {
+  height: 428px;
+}
+.section2 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+.nav.justify-content-center {
+  margin-bottom: 30px;
+}
+/* product */
+.san-pham {
+  padding-top: 20px;
+}
+.section2 img {
+  width: 268px;
+  height: 268px;
+}
+.section2 h4 {
+  font-size: 18px;
+}
+.section2 p {
+  font-size: 14px;
+}
+/* đăng nhập */
+.section-dang-nhap {
+  padding-top: 40px;
+}
+.section-gioi-thieu h2 {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.section-gioi-thieu p {
+  text-align: center;
+  padding-bottom: 20px;
+}
+/* sản phẩm */
+.sanpham-center {
+  text-align: center;
+}
+.col-lg-4 {
+  text-align: center;
+  position: relative;
+  top: 10px;
 }

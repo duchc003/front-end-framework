@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myModule">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 1. khái niệm về directive
+        -Direcectv là một tính năng của angular js 
+        => dùng để mở rộng giao diện html
+        2. các loại Directive :
+        - có sẵn của thư viện :ng-tên của directive
+        - custom directive : theo 1 chuẩn chung
+        3. các dạng Directive :
+        - liên quan tới application: ng-app ,ng-controller
+        - liên quan tới form: (regex) ng-pattern,ng-minlength => validate form 
+        - teamplate : ng-view,ng-include
+        - Operation (Sự kiện ) :ng-click
+        - binding: (two wat binding): ng-model,ng-bind   
+    -->
+    <div ng-controller="myController">{{messega}}</div>
+    {{messega1}}
+    <script src="/AngularJS/lib/angular.js"></script>
+    <script>
+      var app = angular.module("myModule", []);
+      app.controller("myController", function ($scope, $rootScope) {
+        $scope.messega = "hoàng công đức";
+        $rootScope.messega1 = "hoàng công đức";
+      });
+    </script>
+  </body>
+</html>

@@ -1,33 +1,36 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myModule">
-  <!-- ng-app co tham so :ng-app = "myModule" => myModule la 1 module -->
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body ng-controller="myController">
-    <!-- my app sử dụng được angularjs -->
-    <!-- mu controler sử dụng được các hàm tạo ra -->
-    <!-- Module la 1 container (thung chua)
-    Trong mudukle co the su dung duoc cac thanh phần khác nhau cua angular js:
-    controller , filter, service,directive 
-    Cách khai báo một module :
-    var myApp = angular.module("tên module",[])
-    Có 2 tham số:
-        tham số đầu tiên : tên của module
-        DI(dependence Injection : Thường nó sẽ là mảng rổng)-->
-    <p>{{message}}</p>
-    <p>{{employee.firstName}}</p>
-    <p>{{employee.lastName}}</p>
-    <p>{{info[0]}}</p>
-    <p>{{info[1]}}</p>
-    <p>{{employees[0].firstName}}</p>
-    <input type="text" ng-model="number1" />
-    <input type="text" ng-model="number2" />
-    <button ng-click="tinhTong();">sum</button>
-    <script src="../lib/angular.min.js"></script>
-    <script src="index.js"></script>
+  <body>
+    <div ng-app="productApp" ng-controller="productController">
+      <h1>Product List</h1>
+      <div ng-repeat="product in products">
+        <h2 ng-click="showDetails(product)">{{product.name}}</h2>
+      </div>
+      <div ng-if="selectedProduct">
+        <h2>{{selectedProduct.name}}</h2>
+        <p>Price: {{selectedProduct.price}}</p>
+        <p>Description: {{selectedProduct.description}}</p>
+      </div>
+    </div>
+    <script>
+      var app = angular.module("productApp", []);
+      app.controller("productController", function ($scope) {
+        $scope.products = [
+          { name: "Product A", price: 100, description: "This is product A" },
+          { name: "Product B", price: 200, description: "This is product B" },
+          { name: "Product C", price: 300, description: "This is product C" },
+        ];
+        $scope.showDetails = function (products) {
+          $scope.selectedProduct = products;
+        };
+      });
+    </script>
+    <script src="../lib/angular.js"></script>
   </body>
 </html>

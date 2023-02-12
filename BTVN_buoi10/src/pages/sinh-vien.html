@@ -1,0 +1,34 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Function</th>
+    </tr>
+  </thead>
+  <tbody ng-controller="UserController">
+    <tr ng-repeat="sv in listTrangChu1">
+      <td>{{sv.id}}</td>
+      <td>{{sv.name}}</td>
+      <td>{{sv.age}}</td>
+      <td>{{sv.gender == "true" ? "Nam" : "Nữ"}}</td>
+      <td><a ng-click="deleteItem(listTrangChu1)" href="">Delete</a></td>
+    </tr>
+    <tr ng-repeat="sv in listTrangChu2">
+      <td>{{sv.id}}</td>
+      <td>{{sv.name}}</td>
+      <td>{{sv.age}}</td>
+      <td>{{sv.gender == "true" ? "Nam" : "Nữ"}}</td>
+      <td><a href="">Delete</a></td>
+    </tr>
+    <tr ng-repeat="sv in listTrangChu3">
+      <td>{{sv.id}}</td>
+      <td>{{sv.name}}</td>
+      <td>{{sv.age}}</td>
+      <td>{{sv.gender == "true" ? "Nam" : "Nữ"}}</td>
+      <td><a href="">Delete</a></td>
+    </tr>
+  </tbody>
+</table>
