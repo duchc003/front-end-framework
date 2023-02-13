@@ -1,0 +1,54 @@
+{
+  "thucVat": [
+    {
+      "Ten": "Ten 1",
+      "Loai": "Loai 1",
+      "GioiTinh": false,
+      "ID": "1"
+    },
+    {
+      "Ten": "Ten 2",
+      "Loai": "Loai 2",
+      "GioiTinh": false,
+      "ID": "2"
+    },
+    {
+      "Ten": "Ten 3",
+      "Loai": "Loai 3",
+      "GioiTinh": false,
+      "ID": "3"
+    },
+    {
+      "Ten": "Ten 4",
+      "Loai": "Loai 4",
+      "GioiTinh": false,
+      "ID": "4"
+    }
+  ],
+  "dongVat": [
+    {
+      "Ten": "Ten 1",
+      "Loai": "Loai 1",
+      "GioiTinh": false,
+      "ID": "1"
+    },
+    {
+      "Ten": "Ten 2",
+      "Loai": "Loai 2",
+      "GioiTinh": false,
+      "ID": "2"
+    },
+    {
+      "Ten": "Ten 3",
+      "Loai": "Loai 3",
+      "GioiTinh": false,
+      "ID": "3"
+    },
+    {
+      "Ten": "Ten 4",
+      "Loai": "Loai 4",
+      "GioiTinh": false,
+      "ID": "4"
+    }
+  ]
+}

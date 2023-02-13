@@ -31,6 +31,19 @@ myApp.config(function ($routeProvider, $locationProvider) {
     .when("/login", {
       templateUrl: "pages/dang-nhap.html",
     })
+    .when("/ao-real", {
+      templateUrl: "pages/ao-real.html",
+    })
+    .when("/quan-real", {
+      templateUrl: "pages/quan-real.html",
+    })
+    .when("/giay-real", {
+      templateUrl: "pages/giay-real.html",
+    })
+    .when("/All", {
+      templateUrl: "pages/product.html",
+      controller: trangChuController,
+    })
     .otherwise("/home", {
       redirecTo: "pages/trang-chu.html",
     });
