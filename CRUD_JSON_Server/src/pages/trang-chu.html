@@ -1,59 +1,61 @@
 <form>
-  Ten: <input type="text" ng-model="form_sinhVien.ten" />
+  <label for="">Ten: </label> <input type="text" ng-model="form_ThucVat.ten" />
   <br />
-  Loai: <input type="text" ng-model="form_sinhVien.loai" />
+  <label for="">Loai: </label>
+  <input type="text" ng-model="form_ThucVat.loai" />
   <br />
-  Gioi tinh:
+  <label for="">Gioi tinh: </label>
   <input
     type="radio"
     name="gender"
+    ng-model="form_ThucVat.gioiTinh"
     value="true"
-    ng-model="form_sinhVien.gioiTinh"
-    ng-checked="form_sinhVien.gioiTinh == true"
+    ng-checked="form_ThucVat.gioiTinh == true"
   />
   Nam
   <input
     type="radio"
     name="gender"
+    ng-model="form_ThucVat.gioiTinh"
     value="false"
-    ng-model="form_sinhVien.gioiTinh"
-    ng-checked="form_sinhVien.gioiTinh == false"
+    ng-checked="form_ThucVat.gioiTinh == false"
   />
-  Nữ
+  Nu
   <br />
-  <button>Add</button>
-  <button>Update</button>
-  <table>
-    <thead>
-      <tr>
-        <th>NO</th>
-        <th>ID</th>
-        <th>Ten</th>
-        <th>Loai</th>
-        <th>Gioi tinh</th>
-        <th>Function</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="tv in danhSachThucVat">
-        <td>{{$index}}</td>
-        <td>{{tv.ID}}</td>
-        <td>{{tv.Ten}}</td>
-        <td>{{tv.Loai}}</td>
-        <td>{{tv.GioiTinh}}</td>
-        <td>
-          <a
-            href="#thuc-vat/detail/{{tv.ID}}"
-            ng-click="detailStudent($event,$index)"
-            >Detail</a
-          >
-          <a
-            href="#thuc-vat/remove/{{tv.ID}}"
-            ng-click="removeStudent($event,$index)"
-            >Remove</a
-          >
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <button ng-click="addThucVat($event)">ADD</button>
+  <button ng-click="updateThucVat($event)">UPDATE</button>
 </form>
+
+<table>
+  <thead>
+    <tr>
+      <th>STT</th>
+      <th>ID</th>
+      <th>Ten</th>
+      <th>Loai</th>
+      <th>Gioi tinh</th>
+      <th>Function</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="x in listThucVat">
+      <td>{{$index + 1}}</td>
+      <td>{{x.name}}</td>
+      <td>{{x.name}}</td>
+      <td>{{x.name}}</td>
+      <td>{{x.name}}</td>
+      <td>
+        <a
+          href="#thuc-vat/detail/{{x.id}}"
+          ng-click="detailThucVat($event, $index)"
+          >detail</a
+        >
+        <a
+          href="#thuc-vat/delete/{{x.id}}"
+          ng-click="deleteThucVat($event, $index)"
+          >delete</a
+        >
+      </td>
+    </tr>
+  </tbody>
+</table>

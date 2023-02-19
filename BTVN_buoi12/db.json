@@ -1,0 +1,26 @@
+{
+  "Student": [
+    {
+      "Name": "Name 3",
+      "age": "age 3",
+      "gender": false,
+      "adress": "adress 3",
+      "id": "3"
+    },
+    {
+      "Name": "Name 4",
+      "age": "age 4",
+      "gender": false,
+      "adress": "adress 4",
+      "id": "4"
+    },
+    {
+      "ma": "ds",
+      "ten": "sdf",
+      "tuoi": "sdf",
+      "gioiTinh": "false",
+      "diaChi": "sd",
+      "id": "JlR3Fjh"
+    }
+  ]
+}

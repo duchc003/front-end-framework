@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- ng-app: Đánh dấu bắt đầu một module AngularJS. Trong trường hợp này, chúng ta đặt tên module là myApp.
+
+ng-controller: Đánh dấu bắt đầu một controller trong module. Trong trường hợp này, chúng ta đặt tên controller là productsController.
+
+ng-repeat: Lặp qua danh sách sản phẩm và hiển thị tên sản phẩm trên mỗi trang. Chúng ta sử dụng startFrom và limitTo để giới hạn số lượng sản phẩm mà người dùng có thể xem trên mỗi trang.
+
+ng-disabled: Đánh dấu cho nút Previous hoặc Next không sử dụng được khi giá trị hiện tại của trang là 0 hoặc lớn hơn hoặc bằng số trang tổng số.
+
+ng-click: Xử lý sự kiện khi người dùng nhấn vào nút Previous hoặc Next.
+
+Trong đoạn JavaScript, chúng ta khai báo module và controller bằng cách sử dụng angular.module và .controller.
+
+Trong controller, chúng ta khai báo một mảng products chứa các sản phẩm, một biến pageSize chứa kích thước trang, và một biến currentPage chứa trang hiện tại.
+
+Chúng ta tạo hai hàm previousPage và nextPage để xử lý sự kiện nhấn nút Previous và Next. 
+
+Chúng ta tạo một hàm range để tính số lượng trang tổng số.
+
+Trong view, chúng ta sử dụng ng-repeat để lặp qua các trang và hiển thị số trang.
+-->
+    <div ng-controller="productsController">
+      <div
+        ng-repeat="product in products | startFrom:currentPage*pageSize | limitTo:pageSize"
+      >
+        {{product.name}}
+      </div>
+      <button ng-disabled="currentPage == 0" ng-click="previousPage()">
+        Previous
+      </button>
+      {{currentPage+1}}/{{numberOfPages()}}
+      <button
+        ng-disabled="currentPage >= products.length/pageSize - 1"
+        ng-click="nextPage()"
+      >
+        Next
+      </button>
+    </div>
+    <script src="/AngularJS/lib/angular.js"></script>
+    <script src="./route.js"></script>
+  </body>
+</html>

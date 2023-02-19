@@ -1,0 +1,35 @@
+{
+  "Student": [
+    {
+      "Name": "Name 3",
+      "price": "price 3",
+      "coler": "Red",
+      "type": "1",
+      "id": "3"
+    },
+    {
+      "ma": "OTGx4r7",
+      "Name": "Name 2",
+      "price": "price 2",
+      "coler": "Blue",
+      "type": "0",
+      "id": "OTGx4r7"
+    },
+    {
+      "ma": "2",
+      "Name": "Name 2",
+      "price": "price 2",
+      "coler": "Yellow",
+      "type": "1",
+      "id": "QxorOrA"
+    },
+    {
+      "ma": "2",
+      "Name": "Name 2",
+      "price": "price 2",
+      "coler": "Red",
+      "type": "0",
+      "id": "Xiqxscc"
+    }
+  ]
+}

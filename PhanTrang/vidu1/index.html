@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div ng-controller="myCtrl">
+      <!-- Trong view, sử dụng directive "ng-repeat" 
+        để lặp qua tất cả các phần tử trong mảng và 
+        hiển thị mỗi phần tử tương ứng với trang hiện tại: -->
+      <div
+        ng-repeat="item in items | limitTo : itemsPerPage : (currentPage-1)*itemsPerPage"
+      >
+        {{item}}
+      </div>
+      <!-- Sử dụng directive "ng-click" để thay đổi trạng thái của trang hiện tại khi người dùng click vào nút: -->
+      <!-- Sử dụng directive "ng-disabled" để kiểm tra trạng thái của nút và disable nút khi trang hiện tại là trang đầu hoặc trang cuối: -->
+      <!-- Vậy là bạn đã có một ví dụ về phân trang trong AngularJS. Bạn có thể mở rộng và tùy chỉnh code này để phù hợp với nhu cầu của mình. -->
+      <button ng-if="currentPage > 1" ng-click="previousPage()">
+        Previous
+      </button>
+      <button ng-if="currentPage < numberOfPages()" ng-click="nextPage()">
+        Next
+      </button>
+    </div>
+    <script src="../AngularJS/lib/angular.js"></script>
+    <script src="./route.js"></script>
+  </body>
+</html>

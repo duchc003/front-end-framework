@@ -1,41 +1,68 @@
 window.ThucVatController = function ($scope, $http) {
-  $scope.danhSachThucVat = [];
+  // backend - fontend 2 project doc lap voi nhau:
+  // de back-edn va font end giao tiep voi nhau -->
+  // dung phuong thuc HTTP de giao tiep
+  //  va su dung cac method (HTTP method: (co ban): GET, POST, DELETE, PATH, ...)
+  // Dai dien cho CRUD: Create, Read, Update, Delete
+  // GET: dung de hien thi du lieu: <--> READ <--> SELECT
+  $scope.listThucVat = [];
+
+  $scope.viTricanDuocUpdate = -1;
 
   $http.get(thucVatAPI).then(function (response) {
-    console.log(response);
     if (response.status === 200) {
-      $scope.danhSachThucVat = response.data;
+      // 403 loi cam quyen, 404 loi duong dan, ....
+      $scope.listThucVat = response.data;
     }
+    console.log(response.data);
   });
-  // DELETE : Xoa
-  $scope.removeStudent = function (event, index) {
-    event.preventDefault();
-    let tv = $scope.danhSachThucVat[index];
-    let api = thucVatAPI + "/" + tv.id;
+  // POST:
+  // DELETE:
+
+  $scope.deleteThucVat = function (envent, index) {
+    envent.preventDefault();
+    let x = $scope.listThucVat[index];
+    let api = thucVatAPI + "/" + x.id;
+
     $http.delete(api).then(function () {
-      $scope.danhSachThucVat.splice(index, 1);
-      alert("xoa thanh cong");
+      $scope.listThucVat.splice(index, 1);
+      alert("Xoa thanh cong");
     });
   };
-  $scope.form_sinhVien = {
+
+  $scope.form_ThucVat = {
     ten: "",
     loai: "",
-    gioiTinh: true,
+    gioiTinh: false,
   };
-  // Detail
-  $scope.detailStudent = function (event, index) {
+
+  $scope.detailThucVat = function (envent, index) {
+    envent.preventDefault();
+    let x = $scope.listThucVat[index];
+
+    $scope.form_ThucVat.ten = x.name;
+    $scope.form_ThucVat.loai = x.age;
+    $scope.form_ThucVat.gioiTinh = x.gender;
+    $scope.viTricanDuocUpdate = index;
+  };
+
+  //post :them du lieu <=> create <=> insert into
+  $scope.addThucVat = function (event) {
     event.preventDefault();
-    let tv = $scope.danhSachThucVat[index];
-    $scope.form_sinhVien.ten = tv.ten;
-    $scope.form_sinhVien.loai = tv.loai;
-    $scope.form_sinhVien.gioiTinh = tv.gioiTinh;
+    $http.post(thucVatAPI, $scope.form_ThucVat).then(function (response) {
+      $scope.listThucVat.push(response.data);
+    });
+  };
+
+  // -1: chua chon dong update
+
+  //PUT sua du lieu <=> update <=> update
+  $scope.updateThucVat = function (event) {
+    event.preventDefault();
+    let tv = $scope.listThucVat[$scope.viTricanDuocUpdate];
+    let api = thucVatAPI + "/" + tv.id;
+    $http.post(api, $scope.form_ThucVat).then(function (response) {
+      $scope.listThucVat[$scope.viTricanDuocUpdate] = response.data;
+    });
   };
 };
-// để giao tiếp BE,FE dùng phương thức HTTP để giao tiếp
-// và sử dụng các method (HTTP method): GET , POST , DELETE,PUT
-// CRUD : Create , read , delete,update
-// GET hiện thị dữ liệu > read > select
-//403 lỗi cấm quyền
-//Request : những gái trị từ client => server (FE => BE)
-// giống cái tham số truyền vào của 1 hàm
-// respose : kết quả trả về từ phía server => client(BE =>FE)

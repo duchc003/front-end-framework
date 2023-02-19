@@ -8,6 +8,9 @@ header img {
 .i.bi.bi-headset {
   width: 100%;
 }
+footer {
+  background-color: aquamarine;
+}
 footer img {
   height: 50px;
   width: 150px;
@@ -98,7 +101,7 @@ form.d-flex.ng-pristine.ng-valid {
 }
 /* product */
 .san-pham {
-  padding-top: 20px;
+  padding-top: 30px;
 }
 .section2 img {
   width: 268px;
@@ -131,4 +134,27 @@ form.d-flex.ng-pristine.ng-valid {
   text-align: center;
   position: relative;
   top: 10px;
+}
+.section-ao img {
+  width: 268px;
+  height: 250px;
+}
+.section1-ao {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.section-giay img {
+  width: 268px;
+  height: 250px;
+}
+.section1-giay {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.section-add-product {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.product-add {
+  padding-bottom: 180px;
 }

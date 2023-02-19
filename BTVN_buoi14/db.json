@@ -1,0 +1,34 @@
+{
+  "Student": [
+    {
+      "id": "3",
+      "maSV": "MaSV 3",
+      "name": "Name 3",
+      "canNang": 53,
+      "loai": "Loai 2",
+      "gioiTinh": false,
+      "chuyenNganh": "Lập trình web",
+      "soThich": "Ăn"
+    },
+    {
+      "MaSV": "MaSV 4",
+      "Name": "Name 4",
+      "CanNang": 92,
+      "Loai": "Loai 4",
+      "gioiTinh": false,
+      "ChuyenNganh": "Lập trình mobile",
+      "SoThich": "Lăn",
+      "id": "4"
+    },
+    {
+      "id": "2",
+      "maSV": "324",
+      "name": "34dsf",
+      "canNang": "43",
+      "loai": "Loai 2",
+      "gioiTinh": true,
+      "chuyenNganh": "PTPM",
+      "soThich": true
+    }
+  ]
+}

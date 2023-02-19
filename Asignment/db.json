@@ -1,0 +1,109 @@
+{
+  "trangChu": [
+    {
+      "name": "Áo Đấu Real Madrid",
+      "gia": "Giá: 200 200 Đ",
+      "Url": "áo trắng realmareal.jpg"
+    },
+    {
+      "name": "Áo Đấu Real Madrid",
+      "gia": "Giá: 200 200 Đ",
+      "Url": "áo xanh lá cây.jpg"
+    },
+    {
+      "name": "Áo Đấu Real Madrid",
+      "gia": "Giá: 200 200 Đ",
+      "Url": "áo đen.jpg"
+    },
+    {
+      "name": "Áo Đấu Real Madrid",
+      "gia": "Giá: 200 200 Đ",
+      "Url": "áo hồng.jpg"
+    },
+    {
+      "name": "Áo Đấu Real Madrid",
+      "gia": "Giá: 200 200 Đ",
+      "Url": "áo den den.jpg"
+    },
+    {
+      "name": "Áo Đấu Real Madrid",
+      "gia": "Giá: 200 200 Đ",
+      "Url": "áo tím.jpg"
+    },
+    {
+      "name": "Áo Đấu Real Madrid",
+      "gia": "Giá: 200 200 Đ",
+      "Url": "áo tím.jpg"
+    },
+    {
+      "name": "Áo Đấu Real Madrid",
+      "gia": "Giá: 200 200 Đ",
+      "Url": "áo trắng realmareal.jpg"
+    }
+  ],
+  "giay": [
+    {
+      "name": "Giày Real Madrid",
+      "gia": "Giá: 200 200 Đ",
+      "Url": "1.jfif"
+    },
+    {
+      "name": "Giày Real Madrid",
+      "gia": "Giá: 200 200 Đ",
+      "Url": "2.jfif"
+    },
+    {
+      "name": "Giày Real Madrid",
+      "gia": "Giá: 200 200 Đ",
+      "Url": "3.jfif"
+    },
+    {
+      "name": "Giày Real Madrid",
+      "gia": "Giá: 200 200 Đ",
+      "Url": "4.jfif"
+    },
+    {
+      "name": "Giày Real Madrid",
+      "gia": "Giá: 200 200 Đ",
+      "Url": "5.jfif"
+    },
+    {
+      "name": "Giày Real Madrid",
+      "gia": "Giá: 200 200 Đ",
+      "Url": "6.jfif"
+    }
+  ],
+  "product": [],
+  "quan": [
+    {
+      "name": "Quần Real Madrid",
+      "gia": "Giá: 200 200 Đ",
+      "Url": "quan1.jfif"
+    },
+    {
+      "name": "Quần Real Madrid",
+      "gia": "Giá: 200 200 Đ",
+      "Url": "quan2.jfif"
+    },
+    {
+      "name": "Quần Real Madrid",
+      "gia": "Giá: 200 200 Đ",
+      "Url": "quan3.jfif"
+    },
+    {
+      "name": "Quần Real Madrid",
+      "gia": "Giá: 200 200 Đ",
+      "Url": "quan4.jfif"
+    },
+    {
+      "name": "Quần Real Madrid",
+      "gia": "Giá: 200 200 Đ",
+      "Url": "quan5.jpg"
+    },
+    {
+      "name": "Quần Real Madrid",
+      "gia": "Giá: 200 200 Đ",
+      "Url": "quan6.jfif"
+    }
+  ]
+}

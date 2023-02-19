@@ -1,0 +1,172 @@
+<div class="container">
+  <form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">ID</label>
+      <input class="form-control" ng-model="formSinhVien.id" />
+    </div>
+    <br />
+    <div class="form-group">
+      <label for="exampleInputEmail1">Ma</label>
+      <input class="form-control" ng-model="formSinhVien.maSV" />
+    </div>
+    <br />
+    <div class="form-group">
+      <label for="exampleInputEmail1">Name</label>
+      <input class="form-control" ng-model="formSinhVien.name" />
+    </div>
+    <br />
+    <div class="form-group">
+      <label for="exampleInputEmail1">Cân Nặng</label>
+      <input class="form-control" ng-model="formSinhVien.canNang" />
+    </div>
+    <br />
+    <label for="exampleInputEmail1">Giới Tính</label>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        value="true"
+        id="flexRadioDefault1"
+        ng-model="formSinhVien.gioiTinh"
+        ng-checked="formSinhVien.gioiTinh == true"
+      />
+      <label class="form-check-label" for="flexRadioDefault1"> Nam </label>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        value="false"
+        id="flexRadioDefault2"
+        ng-model="formSinhVien.gioiTinh"
+        ng-checked="formSinhVien.gioiTinh == false"
+      />
+      <label class="form-check-label" for="flexRadioDefault2"> Nữ </label>
+    </div>
+    <br />
+    <label class="form-check-label" for="flexRadioDefault2"> Loại </label>
+    <select
+      class="form-select"
+      aria-label="Default select example"
+      ng-model="formSinhVien.loai"
+    >
+      <option value="Loai 1" selected>Loại 1</option>
+      <option value="Loai 2">Loại 2</option>
+      <option value="Loai 3">Loại 3</option>
+      <option value="Loai 4">Loại 4</option>
+    </select>
+    <br />
+    <label for="exampleInputEmail1">Chuyên Ngành</label>
+    <br />
+    <div class="form-check form-check-inline">
+      <input
+        class="form-check-input"
+        type="radio"
+        ng-model="formSinhVien.chuyenNganh"
+        ng-checked="formSinhVien.chuyenNganh == true"
+        value="UDPM"
+      />
+      <label class="form-check-label" for="inlineRadio1">UDPM</label>
+    </div>
+
+    <div class="form-check form-check-inline">
+      <input
+        class="form-check-input"
+        type="radio"
+        ng-model="formSinhVien.chuyenNganh"
+        ng-checked="formSinhVien.chuyenNganh == true"
+        value="PTPM"
+      />
+      <label class="form-check-label" for="inlineRadio2">PTPM</label>
+    </div>
+
+    <div class="form-check form-check-inline">
+      <input
+        class="form-check-input"
+        type="radio"
+        ng-model="formSinhVien.chuyenNganh"
+        ng-checked="formSinhVien.chuyenNganh == true"
+        value="Lập trình web"
+      />
+      <label class="form-check-label" for="inlineRadio3">Lập trình web</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input
+        class="form-check-input"
+        type="radio"
+        ng-model="formSinhVien.chuyenNganh"
+        ng-checked="formSinhVien.chuyenNganh == false"
+        value="Lập trình mobile"
+      />
+      <label class="form-check-label" for="inlineRadio3"
+        >Lập trình mobile</label
+      >
+    </div>
+    <br />
+    <!-- Default checkbox -->
+    <br />
+    <label for="exampleInputEmail1">Sở Thích</label>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        ng-model="formSinhVien.soThich"
+        ng-checked="formSinhVien.soThich == 'Ăn'"
+      />
+      <label class="form-check-label" for="flexCheckDefault">Ăn</label>
+    </div>
+
+    <!-- Checked checkbox -->
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        ng-model="formSinhVien.soThich"
+        ng-checked="formSinhVien.soThich == 'Lăn'"
+      />
+      <label class="form-check-label" for="flexCheckChecked">Lăn</label>
+    </div>
+  </form>
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">ID</th>
+        <th scope="col">Tên</th>
+        <th scope="col">Cân Nặng</th>
+        <th scope="col">Loại</th>
+        <th scope="col">Giới Tính</th>
+        <th scope="col">Chuyên Ngành</th>
+        <th scope="col">Sở thích</th>
+        <th scope="col">Function</th>
+        <hr />
+        <button ng-click="addSinhVien($event)">ADD</button>
+        <button ng-click="updateSinhVien($event)">UPDATE</button>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="sv in listSinhVien">
+        <th>{{$index + 1}}</th>
+        <td>{{sv.id}}</td>
+        <td>{{sv.Name}}</td>
+        <td>{{sv.CanNang}}</td>
+        <td>{{sv.Loai}}</td>
+        <td>{{sv.gioiTinh == true ? "Nam" : "Nữ"}}</td>
+        <td>{{sv.ChuyenNganh}}</td>
+        <td>{{sv.SoThich}}</td>
+        <td>
+          <a
+            href="#sinh-vien/{{sv.id}}"
+            ng-click="detailSinhVien($event,$index)"
+            >Detail</a
+          >
+          <a
+            href="#sinh-vien/{{sv.id}}"
+            ng-click="removeSinhVien($event,$index)"
+            >Delete</a
+          >
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

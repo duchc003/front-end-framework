@@ -1,0 +1,72 @@
+<section>
+  <div>
+    <label>ID</label>
+    <input ng-model="from_SinhVien.ma" />
+  </div>
+  <div>
+    <label>Name</label>
+    <input ng-model="from_SinhVien.ten" />
+  </div>
+  <div>
+    <label>Age</label>
+    <input ng-model="from_SinhVien.tuoi" />
+  </div>
+  <input
+    type="radio"
+    name="gender"
+    value="true"
+    ng-model="from_SinhVien.gioiTinh"
+    ng-checked="from_SinhVien.gioiTinh == true"
+  />
+  Nam
+  <input
+    type="radio"
+    name="gender"
+    value="false"
+    ng-model="from_SinhVien.gioiTinh"
+    ng-checked="from_SinhVien.gioiTinh == false"
+  />
+  Nữ
+  <br />
+  <div>
+    <label>Adress</label>
+    <input ng-model="from_SinhVien.diaChi" />
+  </div>
+  <button ng-click="addStudent($event);">Add</button>
+  <button ng-click="updateSinhVien($event);">Update</button>
+</section>
+<section>
+  <table class="table align-middle mb-0 bg-white">
+    <thead class="bg-light">
+      <tr>
+        <th>STT</th>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>AGE</th>
+        <th>GENDER</th>
+        <th>ADRESS</th>
+        <th>FUNCTION</th>
+      </tr>
+    </thead>
+    <tbody ng-repeat="sv in danhSachSinhVien">
+      <tr>
+        <td>{{$index + 1}}</td>
+        <td>{{sv.id}}</td>
+        <td>{{sv.Name}}</td>
+        <td>{{sv.age}}</td>
+        <td>{{sv.gender}}</td>
+        <td>{{sv.adress}}</td>
+        <td>
+          <a href="#student/{{sv.id}}" ng-click="detailSinhVien($event,$index)"
+            >Detail</a
+          >
+          <a
+            href="#student/remove/{{sv.id}}"
+            ng-click="removeSinhVien($event,$index)"
+            >Remove</a
+          >
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

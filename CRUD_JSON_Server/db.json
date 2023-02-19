@@ -1,54 +1,78 @@
 {
   "thucVat": [
     {
-      "Ten": "Ten 1",
-      "Loai": "Loai 1",
-      "GioiTinh": false,
-      "ID": "1"
+      "name": "name 10",
+      "age": 18,
+      "gender": false,
+      "id": "10"
     },
     {
-      "Ten": "Ten 2",
-      "Loai": "Loai 2",
-      "GioiTinh": false,
-      "ID": "2"
-    },
-    {
-      "Ten": "Ten 3",
-      "Loai": "Loai 3",
-      "GioiTinh": false,
-      "ID": "3"
-    },
-    {
-      "Ten": "Ten 4",
-      "Loai": "Loai 4",
-      "GioiTinh": false,
-      "ID": "4"
+      "ten": "sd",
+      "loai": "sd",
+      "gioiTinh": "true",
+      "id": "x7nnGA_"
     }
   ],
   "dongVat": [
     {
-      "Ten": "Ten 1",
-      "Loai": "Loai 1",
-      "GioiTinh": false,
-      "ID": "1"
+      "ten": "ten 1",
+      "tuoi": 15,
+      "gender": false,
+      "id": "1"
     },
     {
-      "Ten": "Ten 2",
-      "Loai": "Loai 2",
-      "GioiTinh": false,
-      "ID": "2"
+      "ten": "ten 2",
+      "tuoi": 77,
+      "gender": true,
+      "id": "2"
     },
     {
-      "Ten": "Ten 3",
-      "Loai": "Loai 3",
-      "GioiTinh": false,
-      "ID": "3"
+      "ten": "ten 3",
+      "tuoi": 4,
+      "gender": false,
+      "id": "3"
     },
     {
-      "Ten": "Ten 4",
-      "Loai": "Loai 4",
-      "GioiTinh": false,
-      "ID": "4"
+      "ten": "ten 4",
+      "tuoi": 44,
+      "gender": true,
+      "id": "4"
+    },
+    {
+      "ten": "ten 5",
+      "tuoi": 74,
+      "gender": false,
+      "id": "5"
+    },
+    {
+      "ten": "ten 6",
+      "tuoi": 26,
+      "gender": true,
+      "id": "6"
+    },
+    {
+      "ten": "ten 7",
+      "tuoi": 14,
+      "gender": false,
+      "id": "7"
+    },
+    {
+      "ten": "ten 8",
+      "tuoi": 94,
+      "gender": false,
+      "id": "8"
+    },
+    {
+      "ten": "ten 9",
+      "tuoi": 40,
+      "gender": true,
+      "id": "9"
+    },
+    {
+      "ten": "ten 10",
+      "tuoi": 18,
+      "gender": false,
+      "id": "10"
     }
   ]
 }
